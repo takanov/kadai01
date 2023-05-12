@@ -1,0 +1,520 @@
+/* ここから下に記載していく */
+
+.mb30 {
+    margin-bottom: 40px;
+}
+.mb40 {
+    margin-bottom: 40px;
+}
+
+/* loading */
+#splash {
+    /*fixedで全面固定*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+/*Loading画面を中央配置*/
+#splash_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    width: 100%; 
+}
+/*割れるアニメーション*/
+.loader_cover {
+    width: 100%;
+    height: 50%;
+    background-color: #fedd1e;
+    transition: all .2s cubic-bezier(.04, .435, .315, .9);
+    transform: scaleY(1);
+}
+/* 上の画像*/
+.loader_cover-up {
+    transform-origin: center top;
+}
+/* 下の画像*/
+.loader_cover-down {
+    position: absolute;
+    bottom: 0;
+    transform-origin: center bottom;
+}
+
+.coveranime {
+    transform: scaleY(0);
+}
+
+/* header & nav*/
+.header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+}
+
+.header_logo {
+    width: 335px;
+    height: 70px;
+}
+
+/*　上に上がる動き*/
+
+#header.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+#header.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-list {
+    display: flex;
+}
+.nav-item {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin:50px 50px  50px 0px;
+}
+.nav-item a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* main-image*/
+.hero-image {
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+}
+.hero-image img {
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-image__text-wrapper {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform: translate3d(-50%,-50%,0);
+    -ms-transform: translate3d(-50%,-50%,0);
+}
+.hero-imaga__title {
+    font-size: 6.4rem;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 24px;
+    text-shadow: 1px 2px 3px #0000002e;
+}
+.hero-image__discription {
+    font-size: 3.6rem;
+    line-height: 1.5;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 2px 3px #0000002e;;
+}
+
+/*about*/
+
+.content-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.about {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #ffd61a;
+    margin-bottom: 30px;
+}
+
+.about-discription {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #222;
+    margin-bottom: 60px;
+}
+
+.about-text {
+    font-size: 1.6rem;
+    line-height: 2;
+    margin-bottom: 80px;
+    color: #222;
+}
+
+.about-img-list {
+    display: flex;
+    justify-content: center;
+}
+
+.about-img-item {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+
+/* course*/
+
+.course {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.course-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+.course-text {
+    font-size: 1.6rem;
+    line-height: 2;
+    margin-bottom: 80px;
+    color: #222;
+}
+
+.course-contents {
+    display: flex;
+    align-items: center;
+}
+.course-contents img {
+    width: 600px;
+    height: auto;
+}
+
+.course-contents-wrapper {
+    width: 480px;
+}
+
+.course-contents-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #222;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+.course-contents-text {
+    font-size: 1.6rem;
+    line-height: 2;
+    font-weight: normal;
+    color: #222;
+    margin-left: 50px;
+    text-align: left;
+}
+.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.reverse-margin {
+    margin-left: 0;
+    margin-right: 50px;
+}
+
+/* News  */
+.news {
+    margin-bottom: 120px;
+}
+
+.news_title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #ffd61a;
+    margin-bottom: 30px;
+    text-align: center;
+} 
+
+.news-discription {
+    font-size: 1.8rem;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.news_list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.news_list figure img {
+    margin-bottom: 30px;
+}
+.news_item {
+    width: 300px;
+    margin-right: 30px;
+    font-size: 16px;
+    color: #222;
+}
+.news_item:nth-child(3) {
+    margin-right: 0px;
+}
+.news_date {
+    margin-bottom: 24px;
+}
+
+.news-detail {
+    line-height: 1.5;
+}
+
+.btn_more {
+    display: block;
+    width: 300px;
+    line-height: 60px;
+    background-color: #ffd61a;
+    color: #222;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    text-decoration: none;
+    border: none;
+}
+.btn_more:hover {
+    opacity: 0.8;
+}
+
+/* Access  */
+.access {
+    margin-bottom: 120px;
+}
+
+.access_title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.access_discription {
+    font-size: 1.8rem;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.map {
+    margin-bottom: 60px;
+}
+
+.access_wrapper {
+    width: 510px;
+    margin: 0 auto;
+}
+
+.access_item {
+    display: flex;
+    font-size: 1.6rem;
+    line-height: 50px;
+}
+
+.access_label {
+    width: 100px;
+    margin-right: 50px;
+}
+
+/* Contact  */
+.contact {
+    margin-bottom: 140px;
+}
+.contact_title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 30px;
+    text-align: center;
+} 
+
+.contact_discription {
+    font-size: 1.8rem;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.contact_text {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.form_inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    font-size: 1.6rem;
+    width: 640px;
+    margin: 0 auto 30px;
+}
+
+
+
+.form_title {
+    width: 240px; 
+    text-align: left;
+    padding: 8px 64px 8px 16px;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.form_item {
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+.form_parts {
+    width: 328px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/*IE以外のブラウザの設定*/
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+/*IEのブラウザの設定*/
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    background-image: url(../img/chevron_down_circle.svg);
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.form_action {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    width: 400px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form_check,.form_label {
+    margin-bottom: 24px;
+}
+
+.form_check {
+    margin-right: 8px;
+}
+
+/*リセット*/
+input[type="checkbox"] {
+    display: none;
+}
+
+/* チェックボックス03 */
+.form_label {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    width: auto;
+}
+.form_label::before {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+}
+.form_label::after {
+    border-right: 6px solid #fedd1e;
+    border-bottom: 3px solid #fedd1e;
+    content: '';
+    display: block;
+    height: 20px;
+    left: 7px;
+    margin-top: -16px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg) translate3d(0,2px,0) scale3d(.7,.7,1);
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+    width: 9px;
+}
+input[type=checkbox]:checked + .form_label::before {
+    border-color: #666;
+}
+input[type=checkbox]:checked + .form_label::after {
+    opacity: 1;
+    transform: rotate(45deg) scale3d(1,1,1);
+}
+
+
+.form_label {
+    width: 354px;
+    padding-top: 6px;
+}
+.al_c {
+    align-self: center;
+}
+
+
+/* Footer  */
+.footer {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 30px 0;
+    color: #fff;
+    background-color: #707070;
+}
+
